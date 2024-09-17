@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>משחק הכפל - דקה אחת</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="start-screen" class="screen">
+            <h1>משחק הכפל - דקה אחת</h1>
+            <input type="text" id="player-name" placeholder="הכנס את שמך">
+            <button id="start-game">התחל משחק</button>
+        </div>
+        
+        <div id="level-selection" class="screen hidden">
+            <h2>בחר רמת קושי</h2>
+            <div id="game-instructions">
+                <p>בכל רמת קושי שתבחר/י יש לך דקה אחת לענות על כמה שיותר שאלות. כל תשובה נכונה מזכה אותך ב-50 נקודות. כל טעות מקטינה את סך הנקודות שצברת ב-10 נקודות. אז שיהיה בהצלחה!</p>
+            </div>
+            <div id="level-selection-content">
+                <div id="level-options">
+                    <!-- אפשרויות רמת קושי יתווספו כאן דינמית -->
+                </div>
+                <div id="top-players">
+                    <h3>עשרת המובילים</h3>
+                    <table id="top-players-table">
+                        <thead>
+                            <tr>
+                                <th>שם השחקן</th>
+                                <th>רמת קושי</th>
+                                <th>ניקוד</th>
+                                <th>תשובות נכונות</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- נתוני השחקנים יתווספו כאן דינמית -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div id="game-screen" class="screen hidden">
+            <div id="question-panel">
+                <p id="question"></p>
+                <div id="answers">
+                    <!-- תשובות יתווספו כאן דינמית -->
+                </div>
+            </div>
+            <div id="game-info">
+                <p id="timer">זמן: <span id="time">1:00</span></p>
+                <p id="score">ניקוד: <span id="points">0</span></p>
+            </div>
+        </div>
+        
+        <div id="end-screen" class="screen hidden">
+            <h2 id="end-message"></h2>
+            <button id="play-again">שחק שוב</button>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
